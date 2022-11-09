@@ -5,7 +5,7 @@ function Banner ({banner}){
     return(
         <>
             <Img  src={banner}/>
-            
+           
 
         </>
     )
