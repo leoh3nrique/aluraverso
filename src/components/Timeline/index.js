@@ -1,8 +1,10 @@
+
 import {StyledTimeline} from "./styled"
 
 
-function Timeline(propriedades) {
-  // console.log("Dentro do componente", propriedades.playlists);
+function Timeline({searchValue, ...propriedades}) {
+    
+  
   const playlistNames = Object.keys(propriedades.playlists);
   // Statement
   // Retorno por expressão
@@ -11,27 +13,37 @@ function Timeline(propriedades) {
           {playlistNames.map((playlistName) => {
               
               const videos = propriedades.playlists[playlistName];
-              console.log(videos);
+              
               return (
-                  <section>
+                  <section key={playlistName}>
                       <h2>{playlistName}</h2>
                       <div>
-                          {videos.map((video) => {
+                          {videos
+                          .filter((video)=>{
+                            const titleNormalized = video.title.toLowerCase();
+                            const searchValueNormalized = searchValue.toLowerCase();
+                            return titleNormalized.includes(searchValueNormalized)
+                        })
+                          .map((video, key) => {
+                            key = Math.random()
+                            
+
                               if(playlistName !== "favoritos"){
                                 return(
-                                    <a href={video.url}>
+                                    <a key={video.url} href={video.url}>
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}
                                         </span>
                                     </a>
                                 )
+
                               }else{
                                 return(
-                                    <a href={video.url}>
+                                    <a key={key} href={video.url}>
                                         <img className="imgFavoritos" src={video.imagemPerfil} />
                                         <span>
-                                            {video.nome}
+                                            {video.title}
                                         </span>
 
 
