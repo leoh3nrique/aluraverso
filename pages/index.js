@@ -1,5 +1,6 @@
 import config from "../config.json";
 import { useState } from "react";
+import Link from "next/link";
 
 
 
@@ -13,12 +14,7 @@ import Timeline from "../src/components/Timeline";
 
 function HomePage() {
     const[searchValue, setSearchValue] = useState("")
-
-  
-
-
-  
-    
+   
     return (
         <>
             
@@ -27,6 +23,7 @@ function HomePage() {
                 <Banner banner={config.banner}/>
                 <Header github ={config.github} name={config.name} job={config.job} />
                 <Timeline playlists={config.playlists} searchValue = {searchValue} setSearchValue={setSearchValue} />
+                
             </MainContainer>
         </>
     );

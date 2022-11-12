@@ -1,11 +1,19 @@
 
 import {StyledTimeline} from "./styled"
+import Link from "next/link";
+import React from "react";
+
+let obj ={}
+export const InfoVideoContext = React.createContext(obj)
+
 
 
 function Timeline({searchValue, ...propriedades}) {
     
   
   const playlistNames = Object.keys(propriedades.playlists);
+
+  
   
   // Statement
   // Retorno por expressão
@@ -30,13 +38,18 @@ function Timeline({searchValue, ...propriedades}) {
                             
 
                               if(playlistName !== "favoritos"){
+                                {obj.title= video.title}
+                                {obj.url = video.url}
+                                {obj.thumb = video.thumb}
                                 return(
-                                    <a key={video.url} href={video.url}>
+                                    <Link  key={video.url} href="/videos" >
+                                        
+                                        
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}
                                         </span>
-                                    </a>
+                                    </Link>
                                 )
 
                               }else{

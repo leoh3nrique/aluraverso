@@ -1,6 +1,5 @@
 import {useState} from "react";
 import { StyledSearch } from "./styled";
-import Link from "next/link";
 
 
 export default function Search({ valorDoFiltro, setValorDoFiltro, theme}) {
@@ -13,10 +12,6 @@ export default function Search({ valorDoFiltro, setValorDoFiltro, theme}) {
             <button>
                 🔎
             </button>
-            <Link href="videos"> <a>Videos</a></Link>
-
-            
-
         </StyledSearch>
     )
 
