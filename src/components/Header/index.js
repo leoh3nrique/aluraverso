@@ -1,8 +1,8 @@
 import {StyledHeader} from "./styled"
 
-function Header({github, name, job}) {
+function Header({github, name, job,}) {
     return (
-        <StyledHeader>
+        <StyledHeader >
             <section className="user-info">
                 <img src={`https://github.com/${github}.png`} />
                 <div>

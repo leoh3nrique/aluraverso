@@ -5,6 +5,12 @@ export const StyledTimeline = styled.div`
   width: 100%;
   padding: 16px;
   overflow: hidden;
+  background-color: ${({ theme }) => theme.backgroundBase};
+  
+  
+  
+ 
+
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
@@ -33,9 +39,12 @@ export const StyledTimeline = styled.div`
       grid-auto-flow: column;
       grid-auto-columns: minmax(200px,1fr);
       overflow-x: scroll;
+      
       scroll-snap-type: x mandatory;
       .imgFavoritos{
-        border-radius: 50%;
+        border-radius: 100%;
+        
+        
       }
       a {
         scroll-snap-align: start;
@@ -44,7 +53,7 @@ export const StyledTimeline = styled.div`
           padding-top: 8px;
           display: block;
           padding-right: 24px;
-          color: ${({ theme }) => theme.textColorBase || "#222222"};
+          color: ${({ theme }) => theme.textColorBase};
         }
       }
     }

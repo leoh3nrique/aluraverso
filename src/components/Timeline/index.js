@@ -6,6 +6,7 @@ function Timeline({searchValue, ...propriedades}) {
     
   
   const playlistNames = Object.keys(propriedades.playlists);
+  
   // Statement
   // Retorno por expressão
   return (
