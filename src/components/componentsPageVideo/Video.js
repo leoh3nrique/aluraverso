@@ -5,7 +5,7 @@ import { StyledCard } from "./styled"
 
 export default function Video () {
     
-    const video = React.useContext(InfoVideoContext)
+    const video = React.useContext(InfoVideoContext) 
     
     return (
         <StyledCard>

@@ -1,18 +1,18 @@
-import {useState} from "react";
-import { StyledSearch } from "./styled";
+
+import { StyleSearch } from "./styled";
 
 
-export default function Search({ valorDoFiltro, setValorDoFiltro, theme}) {
+export default function Search({ valorDoFiltro, setValorDoFiltro}) {
     const valorDaBusca = valorDoFiltro
     const setValorDaBusca = setValorDoFiltro
 
     return(
-        <StyledSearch theme={theme}>
+        <StyleSearch>
             <input type="text" value={valorDaBusca} onChange={(e)=> setValorDaBusca(e.target.value)}/>
             <button>
                 🔎
             </button>
-        </StyledSearch>
+        </StyleSearch>
     )
 
 

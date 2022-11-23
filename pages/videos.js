@@ -15,12 +15,7 @@ const Videos = () =>{
         <StyledVideo>
             <Menu valorDoFiltro= {searchValue} setValorDoFiltro={setSearchValue} />
             <Video/>
-            
            
-            
-           
-           
-            
         </StyledVideo>
     )
 

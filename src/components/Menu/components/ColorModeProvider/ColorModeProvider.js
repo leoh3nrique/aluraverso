@@ -9,9 +9,9 @@ export const ColorModeContext = React.createContext({
 
 
 
-export function ColorModeProvider ({children, initialMode}){
+export default function ColorModeProvider (props){
 
-    const [mode, setMode]= React.useState(initialMode)
+    const [mode, setMode]= React.useState(props.initialMode)
 
     function toggleMode () {
         if(mode === "dark") setMode("light")
@@ -21,7 +21,8 @@ export function ColorModeProvider ({children, initialMode}){
 
     return(
         <ColorModeContext.Provider value={{mode: mode , setMode:setMode , toggleMode:toggleMode}}>
-            {children}
+            {props.children}
         </ColorModeContext.Provider>
     )
 }
+

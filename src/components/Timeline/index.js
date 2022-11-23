@@ -5,6 +5,7 @@ import React from "react";
 
 let obj ={}
 export const InfoVideoContext = React.createContext(obj)
+//Foi criado um hook context para ser feita a busca das informaçoes necessarias para cada video, ou seja, a cada filtragem ele pega as informaçoes daquele video para ser ultilizada no arquivo Video.js
 
 
 
@@ -24,6 +25,7 @@ function Timeline({searchValue, ...propriedades}) {
               const videos = propriedades.playlists[playlistName];
               
               return (
+                 <>
                   <section key={playlistName}>
                       <h2>{playlistName}</h2>
                       <div>
@@ -41,10 +43,10 @@ function Timeline({searchValue, ...propriedades}) {
                                 {obj.title= video.title}
                                 {obj.url = video.url}
                                 {obj.thumb = video.thumb}
+                                //As informacoes vao ser adicionados em um objeto vazio de nome "obj"
                                 return(
-                                    <Link  key={video.url} href="/videos" >
-                                        
-                                        
+                                    //Quando ele clicar na thumb/Link, ele vai ser redirecionado para a page videos.js e, as informacoes daquele video em si, vao ser filtradas e armazenadas no hook InfoVideoContext 
+                                     <Link  key={video.url} href="/videos" > 
                                         <img src={video.thumb} />
                                         <span>
                                             {video.title}
@@ -63,13 +65,19 @@ function Timeline({searchValue, ...propriedades}) {
 
                                     </a>
                                 )
-                              }
-                                
-                                  
-                              
-                          })}
+                              }              
+    
+                          }
+                                                  
+                          )}
                       </div>
+                      
+                      
                   </section>
+                  
+                 
+                 </>
+                  
               )
           })
           
