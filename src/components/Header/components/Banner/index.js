@@ -1,11 +1,10 @@
-import {Img} from "./styled"
+import { Img } from "./styled";
 
-function Banner ({banner}){
-    return(
-        <>
-            <Img  src={banner}/> 
-        </>
-    )
+function Banner({ banner }) {
+  return (
+    <>
+      <Img src={banner} />
+    </>
+  );
 }
 export default Banner;
-
