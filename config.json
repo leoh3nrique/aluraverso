@@ -130,20 +130,8 @@
                 "url": "https://www.youtube.com/embed/0JWMVc1CqpA",
                 "thumb": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
             }
-        ],
-        "favoritos":[
-            {
-                "title": "Mario",
-                "url": "https://www.youtube.com/c/DevSoutinho",
-                "imagemPerfil": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
-            },
-            {
-                "title": "peas",
-                "url": "https://www.youtube.com/c/DevSoutinho",
-                "imagemPerfil": "https://img.youtube.com/vi/0JWMVc1CqpA/hqdefault.jpg"
-            }
-
         ]
+      
         
     }
 }

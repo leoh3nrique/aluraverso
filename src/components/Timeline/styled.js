@@ -8,8 +8,6 @@ export const StyledTimeline = styled.div`
   background-color: ${({ theme }) => theme.backgroundBase};
   
   
-  
- 
 
   h2 {
     font-size: 16px;

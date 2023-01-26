@@ -3,21 +3,20 @@ import Search from "./components/Search";
 import DarkModeSwitch from "./components/DarkModeSwitch/DarkModeSwitch";
 import Link from "next/link";
 
-
-
-export default function Menu({valorDoFiltro, setValorDoFiltro}) {
-  
+export default function Menu({ valorDoFiltro, setValorDoFiltro }) {
   return (
-    <StyledMenu >
+    <StyledMenu>
       <div>
-        <Link href="/"> <Logo /></Link>
-       
+        <Link href="/">
+          {" "}
+          <Logo />
+        </Link>
       </div>
-      <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
-      <DarkModeSwitch/>
-      
-
+      <Search
+        valorDoFiltro={valorDoFiltro}
+        setValorDoFiltro={setValorDoFiltro}
+      />
+      <DarkModeSwitch />
     </StyledMenu>
   );
 }
-
